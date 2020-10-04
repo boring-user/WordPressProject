@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'dalmiaadvisory_project');
+define('DB_NAME', 'yt6tjzg8rxdzsih4');
 
 /** MySQL database username */
-define('DB_USER', 'dalmiaadvisory_techplug');
+define('DB_USER', 'xu3wrkxpqof91nfl');
 
 /** MySQL database password */
-define('DB_PASSWORD', '65UB;O*vu92n');
+define('DB_PASSWORD', 'stg7spbyfrfi2tdx');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
