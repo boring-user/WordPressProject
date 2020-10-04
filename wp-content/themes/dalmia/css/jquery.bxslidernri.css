@@ -1,0 +1,330 @@
+/**
+ * BxSlider v4.0 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2012
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 0 0px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	/*width: 100%;*/
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	/*-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;*/
+	border: solid #fff 0px;
+	left: 0px;
+	/*background: #fff;*/
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	/*bottom: -60px;*/
+	bottom: 20px;
+	/*height: 63px;*/
+	height: 20px;
+	left:0px;
+	padding-top: 0px;
+	/*right: 10px;*/
+	width: 100%;
+	/*display: none;*/
+	/*background: url(../images/pager-bg.png) left top repeat-x;*/
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(bxslider_images/bx_loader.gif) center center no-repeat;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	/*padding-top: 20px;*/
+	text-align: right;
+	z-index: 99999999;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: 999999px;
+	display: block;
+	width: 18px;
+	height: 19px;
+	background: url(../images/blog-def.png) left top no-repeat;
+	width: 11px;
+	height: 11px;
+	margin: 0 5px 0 0;
+	overflow: hidden;
+	
+
+/*	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;*/
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+	background: url(../images/blog-act.png) left top no-repeat;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+
+
+/*---------blog pager --------*/
+
+
+.blog-dalmia .bx-wrapper .bx-pager .bx-pager-item,
+.blog-dalmia .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.blog-dalmia .bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: 999999px;
+	display: block;
+	width: 18px;
+	height: 19px;
+	background: url(../images/blog-def.png) left top no-repeat;
+	width: 11px;
+	height: 11px;
+	margin: 0 5px 0 0;
+	overflow: hidden;
+	
+
+/*	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;*/
+}
+
+.blog-dalmia .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.blog-dalmia .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+	background: url(../images/blog-act.png) left top no-repeat;
+}
+
+
+.blog-dalmia .bx-wrapper .bx-pager{
+position: absolute;
+/*bottom: 20px;*/
+top:-45px;
+height: 20px;
+left: 0px;
+padding-top: 0px;
+width: 100%;
+}
+
+/*---------blog pager ends --------*/
+
+
+/*---------testimonial pager --------*/
+
+
+.testimonial-dalmia .bx-wrapper .bx-pager .bx-pager-item,
+.testimonial-dalmia .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.testimonial-dalmia .bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: 999999px;
+	display: block;
+	width: 18px;
+	height: 19px;
+	background: url(../images/testi-def.png) left top no-repeat;
+	width: 18px;
+	height: 18px;
+	margin: 0 5px 0 0;
+	overflow: hidden;
+	
+
+/*	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;*/
+}
+
+.testimonial-dalmia .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.testimonial-dalmia .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+	background: url(../images/testi-act.png) left top no-repeat;
+}
+
+
+.testimonial-dalmia .bx-wrapper .bx-pager{
+position: absolute;
+bottom: -25px;
+height: 20px;
+left: -10px;
+
+padding-top: 0px;
+width: 100%;
+}
+
+/*---------testimonial-dalmia pager ends --------*/
+
+
+/*---------Mutual fund slider  starts --------*/
+
+.mfundslide .bx-wrapper .bx-prev {
+	left:0;
+	bottom:0px;
+	background:url(../images/mfundleft-arrow.png) left top no-repeat;
+}
+
+.mfundslide .bx-wrapper .bx-next {
+	left: 30px;
+	bottom:0px;
+	background:url(../images/mfundright-arrow.png) left top no-repeat;
+}
+
+
+.mfundslide .bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: auto;
+    bottom: 0px;
+    width: 25px;
+    height: 25px;
+    text-indent: -999999px;
+    z-index: 99999999;
+}
+
+
+/*---------Mutual fund slider  ends --------*/
+
+
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -60px;
+	width: 44px;
+	height: 84px;
+	text-indent: -999999px;
+	z-index: 99999999;
+}
+
+.bx-wrapper .bx-controls-direction a:hover {
+opacity: 0.6;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+	z-index: 99999999;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -999999px;
+	width: 10px;
+	height: 11px;
+	background: url(bxslider_images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -999999px;
+	width: 9px;
+	height: 11px;
+	background: url(bxslider_images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 785px) {
+
+.mfundslide .bx-wrapper .bx-prev{
+right: 65%;
+}
+
+.mfundslide .bx-wrapper .bx-next{
+right: 50%;
+}
+}

@@ -1,0 +1,169 @@
+<div class="serachdivpras">
+<h2>Search FAQ</h2>
+<div class="insrchpras">
+<form action="<?php echo site_url().'/search-queries/';?>" method="post" >
+<input type="text" name="srchq" placeholder="Type Your Query..."  />
+<input type="submit" name="subbtn" value=" " />
+</form>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div><!--serachdivpras ends-->
+
+<div class="topqueries">
+<h2>Top queries of NRIs</h2>
+<div class="topqueries-info" id="rl">
+<ul>
+<?php
+global $wpdb;
+$table = NCL_TABLE_PREFIX."nri_fqcat";
+$table2 = NCL_TABLE_PREFIX."nri_fqsubcat";
+$table3 = NCL_TABLE_PREFIX."nri_ques";
+
+$sql2 = "SELECT * FROM $table2,$table3 WHERE $table2.nri_fqsubcat_id = $table3.nri_fqsubcat_id ORDER BY $table3.ques_views DESC LIMIT 5 ";
+$results2 = $wpdb->get_results($sql2);
+
+foreach($results2 as $result2)
+{
+$pathurl= site_url().'/faq-on-personal-investment-and-finance?page=&subcatid=';
+
+?>
+<li><a href="<?php echo $pathurl.$result2->nri_fqsubcat_id; ?>"><?php echo $result2->ques_name; ?></a></li>
+<?php
+}
+?>
+</ul>
+
+<div class="clear"></div>
+<a href="<?php echo site_url().'/more-queries/'?>" class="mr">Top 20 Queries</a>
+</div>
+
+<div class="clear"></div>
+</div>
+
+
+
+
+<!--<div class="topqueries">
+<h2>Top queries of NRIs</h2>
+<div class="topqueries-info">
+<ul>
+<?php
+/*$i=0;
+	query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
+	if (have_posts()) : while (have_posts()) : the_post(); if($i<5){ */?>
+    
+	<li><a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a></li>
+<?php
+/*}
+$i++;
+	endwhile; endif;
+	wp_reset_query();*/
+?>
+</ul>
+
+<div class="clear"></div>
+<a href="<?php //echo site_url().'/top-queries/'; ?>" class="mr">More Queries</a>
+</div>
+
+<div class="clear"></div>
+</div>-->
+
+
+<!--<div class="mfundslide">
+<h2><?php echo get_the_category_by_id(22); ?></h2>
+
+<div class="mfundslide-info">
+
+<div class="slidercar">
+
+<?php
+	global $post;
+	$args = array( 'posts_per_page' => -1, 'category' => 22, 'order' => 'DESC');
+	$myposts = get_posts( $args );
+	foreach ( $myposts as $post ) : 
+  	setup_postdata( $post ); 
+?>
+
+<div>
+<div class="tfund-cont">
+<a href="<?php the_permalink() ?>">
+<div class="mpic">
+<?php $thumbmfund=wp_get_attachment_image_src( get_post_thumbnail_id(), 'mfundthumb'); ?> 
+<img src="<?php echo $thumbmfund[0]; ?>" alt="" />
+</div>
+</a>
+<div class="mfund-des">
+<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+<?php
+$limitp=150; 
+$messagep=get_the_content();
+$postp = substr($messagep, 0, $limitp);
+echo "<p>".$postp."...</p>";
+?>
+
+<a href="<?php the_permalink() ?>" class="mufud-rdmr">Read More</a>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+
+<?php 
+endforeach;
+wp_reset_postdata(); 
+?> 
+            
+
+
+</div>
+<div class="clear"></div>
+</div>-->
+
+
+<br /><br />
+<div class="hc-3">
+    	
+        <div class="form-wrapper">
+        <div class="formbox">
+        <!--<h3>GET IN TOUCH</h3>-->
+        <h3>Post your Query</h3>
+        
+        <!--<form method="post" action="#">
+        <div class='f-title'>Name <span class='required'>*</span></div>
+        <input type='text' name='name' value='' class='f-control' />
+        <div class='f-title'>Email Address <span class='required'>*</span></div>
+        <input type='email' name='email' value='' class='f-control' />
+        <div class='f-title'>Phone <span class='required'>*</span></div>
+        <input type='text' name='phone' value='' class='f-control' />
+        <div class='f-title'>Message <span class='required'>*</span></div>
+        <textarea name='message' class='f-control'></textarea>
+        <input type='submit' value='Send Message' class='transition' />
+        </form>-->
+        
+      <?php echo do_shortcode('[contact-form-7 id="470" title="NRI page contact form"]'); ?>
+        </div>
+        </div>
+        
+</div>
+    
+<div class="clear"></div>
+<!--<div class="tabcarrow"></div>-->
+
+
+<?php
+/*$args = array( 'post_type' => 'page', 'meta_key' => 'nrisidepic', 'orderby' => 'meta_value_num', 'order'=>'ASC' );
+$loop = new WP_Query( $args );
+$count=$loop->post_count;
+while ( $loop->have_posts() ) : $loop->the_post(); */
+?>
+<!--<div class="sidepicnri">
+<?php $sidenri=wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); ?>
+<a href="<?php the_permalink(); ?>">
+<img src="<?php echo $sidenri[0]; ?>" alt="<?php the_title(); ?>" />
+</a>
+</div>-->
+<?php
+/*endwhile;
+wp_reset_query();*/
+?>
