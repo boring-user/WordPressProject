@@ -1,9 +1,0 @@
-
-[12-Feb-2018 06:47:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/dalmiaadvisory/public_html/wp-includes/theme-compat/embed-content.php:13
-Stack trace:
-#0 {main}
-  thrown in /home/dalmiaadvisory/public_html/wp-includes/theme-compat/embed-content.php on line 13
-[12-Feb-2018 06:47:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/dalmiaadvisory/public_html/wp-includes/theme-compat/embed-content.php:13
-Stack trace:
-#0 {main}
-  thrown in /home/dalmiaadvisory/public_html/wp-includes/theme-compat/embed-content.php on line 13

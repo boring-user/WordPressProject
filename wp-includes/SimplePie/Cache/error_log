@@ -1,3 +1,0 @@
-[18-Mar-2017 13:03:50 UTC] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/dalmiaadvisory/public_html/wp-includes/SimplePie/Cache/Memcache.php on line 59
-[26-Mar-2017 15:17:51 UTC] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/dalmiaadvisory/public_html/wp-includes/SimplePie/Cache/Memcache.php on line 59
-[03-Apr-2017 23:06:43 UTC] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/dalmiaadvisory/public_html/wp-includes/SimplePie/Cache/Memcache.php on line 59
